@@ -26,7 +26,7 @@ export default function CookieButton() {
                     </h1>
 
                     <p className="text-xs">
-                        We use cookies to personalise content, ads and to analyse our traffic. We also share information about your use of our site with our advertising and analytics partners who may combine it with other information that you've provided to them or that they've collected from your use of their services. 
+                        {"We use cookies to personalise content, ads and to analyse our traffic. We also share information about your use of our site with our advertising and analytics partners who may combine it with other information that you've provided to them or that they've collected from your use of their services."} 
                     </p>
 
                     <div>

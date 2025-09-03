@@ -53,7 +53,7 @@ export default function Dropdown({
         "Billing",
         "Logout"
     ]
-}: { title: string, items?: any }) {
+}: { title: string, items?: Array<string> }) {
     return (
         <div className="relative inline-block group">
             {/* Trigger */}

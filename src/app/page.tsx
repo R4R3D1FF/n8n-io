@@ -207,7 +207,7 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
         <section className="cream-card rounded-2xl  flex h-150 px-24 py-32 mx-25 gap-32">
           <div className="w-1/2 flex flex-col justify-between text-gray-900">
             <h1 className="text-[44px] font-semibold leading-none">
-              Code when you need it, UI when you don't
+              {"Code when you need it, UI when you don't"}
             </h1>
             <p className="w-2/3">
               Other tools limit you to either a visual building experience, or code. With n8n, you get the best of both worlds.
