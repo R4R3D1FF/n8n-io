@@ -161,3 +161,10 @@ body {
     transform: translateX(0%); /* Moves the content by half its width (the length of the original content) */
   }
 }
+
+.flowchart-background{
+  background-image: 
+    linear-gradient(45deg, #503836, #293668);
+  box-shadow: 0 1px 3px rgb(255, 255, 255),
+            0 2px 4px rgba(0, 0, 0, 0.06);
+}

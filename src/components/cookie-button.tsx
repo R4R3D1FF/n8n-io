@@ -1,7 +1,8 @@
 "use client";
 import { CheckboxItem, DropdownMenuCheckboxItem } from "@radix-ui/react-dropdown-menu";
-import { Cookie } from "lucide-react";
+import { Cookie, Settings, Settings2, SettingsIcon } from "lucide-react";
 import { useState } from "react";
+import Checkbox from "./checkbox";
 
 
 
@@ -21,7 +22,7 @@ export default function CookieButton() {
                 <div className="fixed h-[400px] w-65 bg-[#0f0015] bottom-10 left-10 z-[2000] flex flex-col items-centers justify-between hadow-2xl rounded-md">
                     <div>
                     </div>
-                    <h1 className="text-[19px] w-3/4 font-semibold ">
+                    <h1 className="text-[19px] font-semibold ">
                         The website uses cookies
                     </h1>
 
@@ -29,9 +30,19 @@ export default function CookieButton() {
                         {"We use cookies to personalise content, ads and to analyse our traffic. We also share information about your use of our site with our advertising and analytics partners who may combine it with other information that you've provided to them or that they've collected from your use of their services."} 
                     </p>
 
-                    <div>
-                        <input type="checkbox" name="subscribe" value="yes"/>
-  Subscribe to newsletter
+                    <div className="flex flex-col gap-3">
+                        <Checkbox>
+                            Strictly Necessary
+                        </Checkbox>
+                        <Checkbox>
+                            Performance
+                        </Checkbox>
+                        <Checkbox>
+                            Targeting
+                        </Checkbox>
+                        <Checkbox>
+                            Functionality
+                        </Checkbox>
                     </div>
 
                     <div className="flex text-xs font-semibold">
@@ -45,6 +56,11 @@ export default function CookieButton() {
                                 DECLINE ALL
                             </button>
                         </div>
+                    </div>
+
+                    <div className="items-center justify-center font-semibold uppercase text-xs text-gray-200 flex gap-2">
+                        <Settings className="h-5 w-5"/>
+                        Show Details
                     </div>
 
                 </div>

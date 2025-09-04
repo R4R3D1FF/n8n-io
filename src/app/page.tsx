@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <div>
 
-      <div className="flex flex-col gap-32 min-h-50">
+      <div className="flex flex-col min-h-50">
 
-        <section className=" mx-25 flex flex-row justify-center bg-[url('https://n8n.io/images/hero-bg.webp')] bg-[length:100%_auto] bg-[position:150px_0px] relative overflow-hidden h-115">
+        <section className=" mx-25 flex flex-row justify-center bg-[url('https://n8n.io/images/hero-bg.webp')] bg-[length:100%_auto] bg-[position:150px_0px] relative overflow-hidden h-[501px] ">
 
           <div className="absolute inset-0 dotted-bg opacity-[10%] z-0" />
 
@@ -45,7 +45,45 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
           </div>
         </section>
 
-        <section className=" mx-10 flex flex-col gap-2 justify-between h-100 marquee-background">
+        <section className="mx-25 relative flex flex-col h-300 rounded-2xl 
+                            flowchart-background
+                            mb-32 p-8
+                            "
+        >
+          <div className="absolute rounded-2xl inset-4 bg-my-purple">
+            <div className="flex h-50">
+              <div className="w-1/4 h-full">
+                <div className="m-4 rounded-lg bg-gradient-to-bl from-my-purple to-violet-950 h-full">
+                  
+                </div>
+              </div>
+
+              <div className="w-1/4 h-full">
+                <div className="m-4 rounded-lg bg-gradient-to-bl from-my-purple to-violet-950 h-full">
+
+                </div>
+              </div>
+
+              <div className="w-1/4 h-full">
+                <div className="m-4 rounded-lg bg-gradient-to-bl border-1 border-my-purple from-my-purple to-violet-950 h-full">
+
+                </div>
+              </div>
+
+              <div className="w-1/4 h-full">
+                <div className="m-4 rounded-lg bg-gradient-to-bl from-my-purple to-violet-950 h-full">
+
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/Home_ITO_Ps_5a5aac3fda.webp" />
+            </div>
+          </div>
+
+        </section>
+
+        <section className=" mx-10 mb-32 flex flex-col gap-2 justify-between h-100 ">
           <h1 className="text-5xl font-semibold text-center">
             <span className="block bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
               Plug AI into your own data &
@@ -65,7 +103,7 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
 
         </section>
 
-        <section className=" mx-25 flex flex-col gap-2 ">
+        <section className=" mx-25 flex flex-col gap-4 mb-32">
           <h1 className="text-5xl font-semibold text-center">
             <span className="block bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
               The fast way to actually
@@ -295,7 +333,7 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
                 </div>
                 Use 1700+ templates to jump-start your project
               </div>
-              
+
             </div>
             <div>
               <BlueButton>
