@@ -1,23 +1,32 @@
 import BlueButton from "@/components/blue-button";
+import BlueCard from "@/components/blue-card";
 import Card from "@/components/card";
 import { DarkButton } from "@/components/dark-button";
+import Footer from "@/components/footer";
 import IconMarquee from "@/components/icon-marquee";
 import { Navbar } from "@/components/navbar";
 import { OrangeButton } from "@/components/orange-button";
 import { ArrowRight, Check, CodeXml } from "lucide-react";
+import ImageDiv from "@/components/image-div";
 
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full">
 
-      <div className="flex flex-col min-h-50">
+      <div className="flex flex-col items-center min-h-50 w-full">
 
-        <section className=" mx-25 flex flex-row justify-center bg-[url('https://n8n.io/images/hero-bg.webp')] bg-[length:100%_auto] bg-[position:150px_0px] relative overflow-hidden h-[501px] ">
+        <section className="pb-40 lg:pb-0 w-9/10 max-w-285 flex flex-row justify-center md:justify-start  relative overflow-hidden md:h-[501px] ">
 
+          <div className="absolute inset-0 
+                          bg-[url('https://n8n.io/images/hero-bg.webp')] bg-[length:auto_100%] bg-[position:60%_0] md:bg-[position:40%_0] lg:bg-[position:0%_0]  opacity-30 md:opacity-100
+                          "
+          >
+
+          </div>
           <div className="absolute inset-0 dotted-bg opacity-[10%] z-0" />
 
-          <div className="w-[54%] px-12 z-50 flex flex-col justify-center gap-8">
+          <div className="pt-40 lg:pt-0 md:w-3/5 px-12 z-50 flex flex-col justify-center gap-8">
             <h1 className="text-4xl font-semibold">
               <span className="block bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
                 Flexible AI workflow automation
@@ -33,62 +42,67 @@ Build with the precision of code or the speed of drag-n-drop.
 Host with on-prem control or in-the-cloud convenience.
 n8n gives you more freedom to implement multi-step AI agents and integrate apps than any other tool.`}
             </p>
-            <div className="flex gap-4 ">
-              <OrangeButton className="px-5 py-2 text-sm border-b-1" content="Get Started for free" />
-              <DarkButton className="text-sm">
+            <div className="flex flex-col md:flex-row gap-4 ">
+              <OrangeButton className="px-5 py-2 text-sm border-b-1 font-medium" content="Get Started for free" />
+              <DarkButton className="text-sm font-medium">
                 Talk to Sales
               </DarkButton>
             </div>
           </div>
-          <div className="w-[46%] ">
-            ono
-          </div>
         </section>
 
-        <section className="mx-25 relative flex flex-col h-300 rounded-2xl 
+        {/* <section className="hidden lg:block w-full md:w-279 relative flex flex-col h-300 rounded-2xl 
                             flowchart-background
-                            mb-32 p-8
-                            "
+                            mb-32 p-8"
         >
-          <div className="absolute rounded-2xl inset-4 bg-my-purple">
-            <div className="flex h-50">
-              <div className="w-1/4 h-full">
-                <div className="m-4 rounded-lg bg-gradient-to-bl from-my-purple to-violet-950 h-full">
-                  
-                </div>
-              </div>
-
-              <div className="w-1/4 h-full">
-                <div className="m-4 rounded-lg bg-gradient-to-bl from-my-purple to-violet-950 h-full">
+          <div className="absolute rounded-2xl inset-2 bg-my-purple ">
+            <div className="flex h-35 mb-10 mx-1">
+              <div className="w-1/5 h-full">
+                <div className="my-2 mx-1 rounded-lg border-1 border-[#2f2b38] hover:border-[#4f3b68] bg-gradient-to-bl from-[#251d32] to-[#171321] hover:from-[#302240] hover:to-[#1b1829] h-full cursor-pointer">
 
                 </div>
               </div>
 
-              <div className="w-1/4 h-full">
-                <div className="m-4 rounded-lg bg-gradient-to-bl border-1 border-my-purple from-my-purple to-violet-950 h-full">
+              <div className="w-1/5 h-full">
+                <div className="my-2 mx-1 rounded-lg border-1 border-[#2f2b38] hover:border-[#4f3b68] bg-gradient-to-bl from-[#251d32] to-[#171321] hover:from-[#302240] hover:to-[#1b1829] h-full cursor-pointer">
 
                 </div>
               </div>
 
-              <div className="w-1/4 h-full">
-                <div className="m-4 rounded-lg bg-gradient-to-bl from-my-purple to-violet-950 h-full">
+              <div className="w-1/5 h-full">
+                <div className="my-2 mx-1 rounded-lg border-1 border-[#2f2b38] hover:border-[#4f3b68] bg-gradient-to-bl from-[#251d32] to-[#171321] hover:from-[#302240] hover:to-[#1b1829] h-full cursor-pointer">
 
                 </div>
               </div>
+
+              <div className="w-1/5 h-full">
+                <div className="my-2 mx-1 rounded-lg border-1 border-[#2f2b38] hover:border-[#4f3b68] bg-gradient-to-bl from-[#251d32] to-[#171321] hover:from-[#302240] hover:to-[#1b1829] h-full cursor-pointer">
+
+                </div>
+              </div>
+
+              <div className="w-1/5 h-full">
+                <div className="my-2 mx-1 rounded-lg border-1 border-[#2f2b38] hover:border-[#4f3b68] bg-gradient-to-bl from-[#251d32] to-[#171321] hover:from-[#302240] hover:to-[#1b1829] h-full cursor-pointer">
+
+                </div>
+              </div>
+
             </div>
             <div>
               <img src="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/Home_ITO_Ps_5a5aac3fda.webp" />
             </div>
           </div>
 
-        </section>
+        </section> */}
 
-        <section className=" mx-10 mb-32 flex flex-col gap-2 justify-between h-100 ">
+        <ImageDiv />
+
+        <section className=" mx-10 mb-32 flex flex-col gap-2 justify-between h-130 overflow-hidden">
           <h1 className="text-5xl font-semibold text-center">
-            <span className="block bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent h-14">
               Plug AI into your own data &
             </span>
-            <span className="block bg-gradient-to-r from-orange-400 to-orange-900 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-orange-400 to-orange-900 bg-clip-text text-transparent h-14">
               over 500 integrations
             </span>
 
@@ -103,30 +117,30 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
 
         </section>
 
-        <section className=" mx-25 flex flex-col gap-4 mb-32">
-          <h1 className="text-5xl font-semibold text-center">
-            <span className="block bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+        <section className=" w-9/10 max-w-280 flex flex-col gap-4 mb-32">
+          <h1 className="text-5xl font-semibold text-center ">
+            <span className="block bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent h-14">
               The fast way to actually
             </span>
-            <span className="block bg-gradient-to-r from-orange-400 to-orange-900 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-orange-400 to-orange-900 bg-clip-text text-transparent h-14">
               get AI working in your business
             </span>
 
           </h1>
-          <div className="flex gap-2">
-            <div className="w-2/3 h-175 flex flex-col gap-2 justify-center">
-              <Card className="h-1/2 flex justify-between" >
-                <div className="flex flex-col w-1/2 gap-4 justify-center">
-                  <h1 className="text-2xl font-semibold">
+          <div className="flex flex-col lg:h-200 lg:flex-row gap-4 lg:gap-2">
+            <div className="w-full lg:w-2/3 lg:h-200 flex flex-col gap-4 lg:gap-2 justify-center">
+              <Card className="h-150 md:h-100 lg:h-1/2 flex flex-col md:flex-row justify-between z-50 relative" >
+                <div className="flex flex-col lg:w-1/2 gap-4 justify-center">
+                  <h1 className="text-2xl font-semibold z-50">
                     Build multi-step agents calling custom tools
                   </h1>
-                  <p className="text-zinc-400 font-light">
+                  <p className="text-zinc-400 font-light z-50">
                     Create agentic systems on a single screen. Integrate any LLM into your workflows as fast as you can drag-n-drop.
                   </p>
 
                   <div>
-                    <BlueButton className="flex items-center gap-2 font-normal">
-                      <span>
+                    <BlueButton className="flex items-center gap-2 font-normal z-50">
+                      <span className="">
                         Explore AI
                       </span>
                       <ArrowRight className="h-4 w-4" />
@@ -134,13 +148,14 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
                   </div>
 
                 </div>
-                <div className="w-1/2 bg-[url('https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/teams_of_agent_e1f7b47c2f.png')] bg-cover bg-center flex flex-col gap-35 justify-between">
-                  <div className="flex flex-col items-center text-xs">
+                <div className="w-full md:w-1/2 bg-[url('https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/teams_of_agent_e1f7b47c2f.png')] bg-cover bg-center flex flex-col gap-35 justify-between z-50">
+                  <div className="opacity-0 lg:opacity-100 flex flex-col items-center text-xs">
                     <div className="flex w-fit text-center text-zinc-400 border-slate-950 border-1 rounded-full px-3 py-1 flex justify-center items-center gap-2">
                       <span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="size-[18px] text-zinc-600">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="size-[18px] text-zinc-600 z-50">
                           <path fillRule="evenodd"
                             clipRule="evenodd"
+                            className="z-50"
                             d="M7.2 1.2002C4.54904 1.2002 2.4 3.34923 2.4 6.0002V9.6002C2.4 10.2629 1.86275 10.8002 1.2 10.8002C0.537258 10.8002 0 11.3375 0 12.0002C0 12.6629 0.537258 13.2002 1.2 13.2002C1.86275 13.2002 2.4 13.7375 2.4 14.4002V18.0001C2.4 20.6512 4.54904 22.8001 7.2 22.8001C7.86275 22.8001 8.4 22.263 8.4 21.6001C8.4 20.9374 7.86275 20.4001 7.2 20.4001C5.87451 20.4001 4.8 19.3257 4.8 18.0001V14.4002C4.8 13.4782 4.45338 12.6371 3.88332 12.0002C4.45338 11.3633 4.8 10.5222 4.8 9.6002V6.0002C4.8 4.67471 5.87451 3.6002 7.2 3.6002C7.86275 3.6002 8.4 3.06294 8.4 2.4002C8.4 1.73745 7.86275 1.2002 7.2 1.2002ZM16.8 1.2002C16.1373 1.2002 15.6 1.73745 15.6 2.4002C15.6 3.06294 16.1373 3.6002 16.8 3.6002C18.1255 3.6002 19.2 4.67471 19.2 6.0002V9.6002C19.2 10.5222 19.5466 11.3633 20.1166 12.0002C19.5466 12.6371 19.2 13.4782 19.2 14.4002V18.0001C19.2 19.3257 18.1255 20.4001 16.8 20.4001C16.1373 20.4001 15.6 20.9374 15.6 21.6001C15.6 22.263 16.1373 22.8001 16.8 22.8001C19.451 22.8001 21.6 20.6512 21.6 18.0001V14.4002C21.6 13.7375 22.1373 13.2002 22.8 13.2002C23.4627 13.2002 24 12.6629 24 12.0002C24 11.3375 23.4627 10.8002 22.8 10.8002C22.1373 10.8002 21.6 10.2629 21.6 9.6002V6.0002C21.6 3.34923 19.451 1.2002 16.8 1.2002ZM11.7977 15.6121C11.7977 15.6921 11.8217 15.7602 11.8697 15.8161C11.9257 15.8721 11.9977 15.9001 12.0857 15.9001H13.1777C13.2577 15.9001 13.3257 15.8721 13.3817 15.8161C13.4377 15.7602 13.4657 15.6921 13.4657 15.6121V7.78812C13.4657 7.70813 13.4377 7.64012 13.3817 7.58412C13.3257 7.52813 13.2577 7.50012 13.1777 7.50012H12.1217C12.0657 7.50012 12.0137 7.50413 11.9657 7.51212C11.9177 7.52012 11.8697 7.54412 11.8217 7.58412L9.13371 9.66012C9.06171 9.70812 9.01772 9.77213 9.00171 9.85212C8.99372 9.93212 9.01371 10.0081 9.06171 10.0801L9.56571 10.7281C9.62172 10.8001 9.68571 10.8441 9.75771 10.8601C9.82971 10.8681 9.90171 10.8481 9.97371 10.8001L11.7977 9.39612V15.6121Z"
                             data-v-df85f908="">
                           </path>
@@ -153,7 +168,7 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
 
                     <div className="flex w-fit text-center text-zinc-400 border-slate-950 border-1 rounded-full px-3 py-1 flex justify-center items-center gap-2">
                       <span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="size-[18px] text-zinc-600">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="size-[18px] text-zinc-600 ">
                           <path fillRule="evenodd"
                             clipRule="evenodd"
                             d="M7.2 1.2002C4.54904 1.2002 2.4 3.34923 2.4 6.0002V9.6002C2.4 10.2629 1.86275 10.8002 1.2 10.8002C0.537258 10.8002 0 11.3375 0 12.0002C0 12.6629 0.537258 13.2002 1.2 13.2002C1.86275 13.2002 2.4 13.7375 2.4 14.4002V18.0001C2.4 20.6512 4.54904 22.8001 7.2 22.8001C7.86275 22.8001 8.4 22.263 8.4 21.6001C8.4 20.9374 7.86275 20.4001 7.2 20.4001C5.87451 20.4001 4.8 19.3257 4.8 18.0001V14.4002C4.8 13.4782 4.45338 12.6371 3.88332 12.0002C4.45338 11.3633 4.8 10.5222 4.8 9.6002V6.0002C4.8 4.67471 5.87451 3.6002 7.2 3.6002C7.86275 3.6002 8.4 3.06294 8.4 2.4002C8.4 1.73745 7.86275 1.2002 7.2 1.2002ZM16.8 1.2002C16.1373 1.2002 15.6 1.73745 15.6 2.4002C15.6 3.06294 16.1373 3.6002 16.8 3.6002C18.1255 3.6002 19.2 4.67471 19.2 6.0002V9.6002C19.2 10.5222 19.5466 11.3633 20.1166 12.0002C19.5466 12.6371 19.2 13.4782 19.2 14.4002V18.0001C19.2 19.3257 18.1255 20.4001 16.8 20.4001C16.1373 20.4001 15.6 20.9374 15.6 21.6001C15.6 22.263 16.1373 22.8001 16.8 22.8001C19.451 22.8001 21.6 20.6512 21.6 18.0001V14.4002C21.6 13.7375 22.1373 13.2002 22.8 13.2002C23.4627 13.2002 24 12.6629 24 12.0002C24 11.3375 23.4627 10.8002 22.8 10.8002C22.1373 10.8002 21.6 10.2629 21.6 9.6002V6.0002C21.6 3.34923 19.451 1.2002 16.8 1.2002ZM11.7977 15.6121C11.7977 15.6921 11.8217 15.7602 11.8697 15.8161C11.9257 15.8721 11.9977 15.9001 12.0857 15.9001H13.1777C13.2577 15.9001 13.3257 15.8721 13.3817 15.8161C13.4377 15.7602 13.4657 15.6921 13.4657 15.6121V7.78812C13.4657 7.70813 13.4377 7.64012 13.3817 7.58412C13.3257 7.52813 13.2577 7.50012 13.1777 7.50012H12.1217C12.0657 7.50012 12.0137 7.50413 11.9657 7.51212C11.9177 7.52012 11.8697 7.54412 11.8217 7.58412L9.13371 9.66012C9.06171 9.70812 9.01772 9.77213 9.00171 9.85212C8.99372 9.93212 9.01371 10.0081 9.06171 10.0801L9.56571 10.7281C9.62172 10.8001 9.68571 10.8441 9.75771 10.8601C9.82971 10.8681 9.90171 10.8481 9.97371 10.8001L11.7977 9.39612V15.6121Z"
@@ -181,7 +196,7 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
                       </span>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center text-xs">
+                  <div className="opacity-0 lg:opacity-100 flex flex-col items-center text-xs">
                     <div className="flex w-fit text-center text-zinc-400 border-slate-950 border-1 rounded-full px-3 py-1 flex justify-center items-center gap-2">
                       <span>
                         <svg width="24"
@@ -234,134 +249,209 @@ n8n gives you more freedom to implement multi-step AI agents and integrate apps 
                   </div>
                 </div>
               </Card>
-              <Card className="h-1/2" >
+
+              <Card className="h-150 md:h-100 lg:h-1/2 flex flex-col md:flex-row justify-between z-50 relative" >
+                <div className="w-full h-400 md:h-auto md:w-1/2 bg-[url('https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/self_host_66e57951a8.png')] opacity-50 bg-cover bg-center flex flex-col gap-35 justify-between z-50">
+
+                </div>
+                <div className="flex flex-col lg:w-1/2 gap-4 justify-center">
+                  <h1 className="text-2xl font-semibold z-50">
+                    Self-host everything – including AI models
+                  </h1>
+                  <p className="text-zinc-400 font-light z-50">
+                    Protect your data by deploying on-prem.
+                  </p>
+
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-2 font-normal z-50">
+                      <Check className="text-gray-400 w-5 h-5" />
+                      <p className="text-gray-400 font-light">
+                        Deploy with Docker
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2 font-normal z-50">
+                      <Check className="text-gray-400 w-5 h-5" />
+                      <p className="text-gray-400 font-light">
+                        Access the entire source code on Github
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2 font-normal z-50">
+                      <Check className="text-gray-400 w-5 h-5" />
+                      <p className="text-gray-400 font-light">
+                        Hosted version also available
+                      </p>
+                    </div>
+
+
+                  </div>
+
+                </div>
+
               </Card>
             </div>
-            <Card className="w-1/3" >
-            </Card>
+
+            <BlueCard className="h-150 md:h-100 lg:h-full w-full lg:w-1/3 flex flex-col p-4 gap-4 justify-center" >
+              <h1 className="text-2xl font-semibold z-50">
+                Chat with your own data
+              </h1>
+              <p className="text-zinc-400 font-light z-50">
+                Use Slack, Teams, SMS, voice, or our embedded chat interface to get accurate answers from your data, create tasks, and complete workflows.
+              </p>
+
+              <div className="flex flex-col gap-4 text-xs font-medium justify-between text-gray-400">
+                <div className="border-1 border-gray-700 w-2/3 px-4 py-2 rounded-md">
+                  Who held meetings with SpaceX last week?
+                </div>
+                
+                <div className="border-1 border-gray-700 w-2/3 px-4 py-2 rounded-md">
+                  On Wednesday, Joe updated the status to "won" in Salesforce after a Zoom call.
+                </div>
+
+                <div className="border-1 border-gray-700 w-2/3 px-4 py-2 rounded-md">
+                  On Thursday, Sue provided on-site setup and closed the ServiceNow ticket.
+                </div>
+              </div>
+
+            </BlueCard>
           </div>
         </section>
 
-        <section className="cream-card rounded-2xl  flex h-150 px-24 py-32 mx-25 gap-32">
-          <div className="w-1/2 flex flex-col justify-between text-gray-900">
-            <h1 className="text-[44px] font-semibold leading-none">
-              {"Code when you need it, UI when you don't"}
-            </h1>
-            <p className="w-2/3">
-              Other tools limit you to either a visual building experience, or code. With n8n, you get the best of both worlds.
-            </p>
+        <section className="flex flex-col items-center px-8 w-full max-w-328 relative gap-16 md:gap-0">
 
-            <div className="flex flex-col gap-4 text-zinc-500 ">
-              <div className="flex gap-1">
-                <CodeXml className="mr-1 " />
-                <span className="font-semibold text-gray-950 ">
-                  Write JavaScript or Python
-                </span>
-                - you can always fall back to code
+          <section className="cream-card w-full lg:sticky z-0 top-30 rounded-2xl  flex flex-col lg:flex-row lg:h-150 px-8 lg:px-24 py-8 lg:py-32 gap-16 lg:gap-32">
+            <div className="w-full lg:w-1/2 flex flex-col gap-4 lg:gap-0 justify-between text-gray-900 order-2 lg:order-1">
+              <h1 className="text-[44px] font-semibold leading-none">
+                {"Code when you need it, UI when you don't"}
+              </h1>
+              <p className="w-2/3">
+                Other tools limit you to either a visual building experience, or code. With n8n, you get the best of both worlds.
+              </p>
 
-              </div>
+              <div className="flex flex-col gap-4 text-zinc-500 ">
+                <div className="flex gap-1">
+                  <CodeXml className="mr-1 " />
+                  <span className="font-semibold text-gray-950 ">
+                    Write JavaScript or Python
+                  </span>
+                  - you can always fall back to code
 
-              <div className="flex gap-1">
+                </div>
 
-                <CodeXml className="mr-1" />
-                <span className="font-semibold text-gray-950">
-                  Add libraries
-                </span>
-                from npm or Python for even more power
+                <div className="flex gap-1">
 
-              </div>
+                  <CodeXml className="mr-1" />
+                  <span className="font-semibold text-gray-950">
+                    Add libraries
+                  </span>
+                  from npm or Python for even more power
 
-              <div className="flex gap-1">
+                </div>
 
-                <CodeXml className="mr-1" />
-                <span className="font-semibold text-gray-950">
-                  Past cURL requests
-                </span>
-                into your workflow
+                <div className="flex gap-1">
 
-              </div>
+                  <CodeXml className="mr-1" />
+                  <span className="font-semibold text-gray-950">
+                    Past cURL requests
+                  </span>
+                  into your workflow
 
-              <div className="flex gap-1">
+                </div>
 
-                <CodeXml className="mr-1" />
-                <span className="font-semibold text-gray-950">
-                  Merge workflow branches,
-                </span>
-                don’t just split them
+                <div className="flex gap-1">
 
+                  <CodeXml className="mr-1" />
+                  <span className="font-semibold text-gray-950">
+                    Merge workflow branches,
+                  </span>
+                  don’t just split them
+
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-1/2 p-2 flex perspective-[750px]" >
-            <img src="https://n8n.io/images/code.webp" className="w-full h-full border-2 border-white outline-3 outline-black rounded-lg [transform:rotateY(-20deg)]">
+            <div className="w-full lg:w-1/2 p-2 flex perspective-[750px] order-1 lg:order-2" >
+              <img src="https://n8n.io/images/code.webp" className="w-full h-auto border-2 border-white outline-3 outline-black rounded-lg [transform:rotateY(-20deg)]">
 
-            </img>
+              </img>
 
-          </div>
+            </div>
+
+            {/* <div className="w-full lg:w-1/2 p-2 flex perspective-[1000px] order-1 lg:order-2 items-center justify-center" >
+              <img src="https://n8n.io/images/code.webp" className="w-full h-auto border-2 border-white outline-3 outline-black rounded-lg [transform:rotateY(-20deg)]">
+
+              </img>
+
+            </div> */}
+          </section>
+
+          <section className="border-slate-800 w-full border-[1px] lg:h-150 rounded-2xl px-8 lg:px-24 flex flex-col lg:flex-row lg:gap-10 relative z-50 bg-my-purple">
+            <div className="w-full lg:w-auto flex flex-col gap-4 lg:gap-0 justify-between pb-8 lg:pb-32 lg:py-32 order-2 lg:order-1">
+              <h1 className="text-4xl font-semibold">
+                Run. Tweak. Repeat
+              </h1>
+              <p>
+                The same short feedback loops that make you smile at your scripts
+              </p>
+              <div className="flex flex-col lg:flex-wrap  lg:h-40">
+                <div className="lg:w-1/2 lg:h-1/2 flex gap-3  pb-1 pr-8">
+                  <div className="pt-1">
+                    <Check className="w-5 h-5 " />
+                  </div>
+                  Re-run single steps without re-running the whole workflow
+                </div>
+                <div className="lg:w-1/2 lg:h-1/2 flex gap-3 pb-1 pr-8">
+                  <div className="pt-1">
+                    <Check className="w-5 h-5 " />
+                  </div>
+                  Replay or mock data to avoid waiting for external systems
+                </div>
+                <div className="lg:w-1/2 lg:h-1/2 flex gap-3 pb-1 pr-8">
+                  <div className="pt-1">
+                    <Check className="w-5 h-5 " />
+                  </div>
+                  Debug fast, with logs in line with your code
+                </div>
+                <div className="lg:w-1/2 lg:h-1/2 flex gap-3 pb-1 pr-8">
+                  <div className="pt-1">
+                    <Check className="w-5 h-5 " />
+                  </div>
+                  Use 1700+ templates to jump-start your project
+                </div>
+
+              </div>
+              <div>
+                <BlueButton>
+                  See full product overview
+                </BlueButton>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2 flex items-center justify-center bg-video pointer-events-none aspect-video relative order-1 lg:order-2 ">
+              <div className="absolute inset-0 bg-linear-[90deg,theme(colors.my-purple),transparent_30%,transparent_70%,theme(colors.my-purple)] z-50" />
+              <div className="absolute inset-0 bg-linear-[0deg,theme(colors.my-purple),transparent_30%,transparent_70%,theme(colors.my-purple)] z-50" />
+              <img src="https://n8n.io/images/thunder.webp" className="h-2/3 w-auto md:h-[37%] pb-[7.6%] lg:pb-10" />
+              <video
+                preload="auto"
+                loop
+                autoPlay
+                muted
+                playsInline
+                className="bg-video--mask-linear mix-blend-lighten object-cover object-center absolute left-0 top-0 w-full h-full"
+              >
+                <source
+                  src="https://n8n.io/videos/run-tweak-repeat.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+
+          </section>
+
+
         </section>
 
-        <section className="border-slate-800 border-[1px] h-150 rounded-2xl px-24 mx-25 flex h-150 gap-10">
-          <div className="w-auto flex flex-col justify-between py-32">
-            <h1 className="text-4xl font-semibold">
-              Run. Tweak. Repeat
-            </h1>
-            <p>
-              The same short feedback loops that make you smile at your scripts
-            </p>
-            <div className="flex flex-wrap ">
-              <div className="w-1/2 h-1/2 flex gap-3 pb-4 pr-8">
-                <div className="pt-1">
-                  <Check className="w-5 h-5 " />
-                </div>
-                Re-run single steps without re-running the whole workflow
-              </div>
-              <div className="w-1/2 h-1/2 flex gap-3 pb-4 pr-8">
-                <div className="pt-1">
-                  <Check className="w-5 h-5 " />
-                </div>
-                Replay or mock data to avoid waiting for external systems
-              </div>
-              <div className="w-1/2 h-1/2 flex gap-3 pb-4 pr-8">
-                <div className="pt-1">
-                  <Check className="w-5 h-5 " />
-                </div>
-                Debug fast, with logs in line with your code
-              </div>
-              <div className="w-1/2 h-1/2 flex gap-3 pb-4 pr-8">
-                <div className="pt-1">
-                  <Check className="w-5 h-5 " />
-                </div>
-                Use 1700+ templates to jump-start your project
-              </div>
-
-            </div>
-            <div>
-              <BlueButton>
-                See full product overview
-              </BlueButton>
-            </div>
-          </div>
-          <div className="w-1/2 flex items-center justify-center bg-video pointer-events-none aspect-video relative">
-            <div className="absolute inset-0 bg-linear-[90deg,theme(colors.my-purple),transparent_30%,transparent_70%,theme(colors.my-purple)] z-50" />
-            <div className="absolute inset-0 bg-linear-[0deg,theme(colors.my-purple),transparent_30%,transparent_70%,theme(colors.my-purple)] z-50" />
-            <img src="https://n8n.io/images/thunder.webp" className="h-[37%] pb-10" />
-            <video
-              preload="auto"
-              loop
-              autoPlay
-              muted
-              playsInline
-              className="bg-video--mask-linear mix-blend-lighten object-cover object-center absolute left-0 top-0 w-full h-full"
-            >
-              <source
-                src="https://n8n.io/videos/run-tweak-repeat.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
-
-
-        </section>
+        <Footer />
 
       </div>
     </div>

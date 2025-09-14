@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <Navbar />
         
-        <div className="bg-my-purple text-white py-8">
+        <div className="bg-my-purple text-white py-8 ">
           {/* <div className="h-10" /> */}
           
           {children}

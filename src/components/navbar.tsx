@@ -3,12 +3,14 @@ import { ChevronDown, Github, Star } from "lucide-react";
 import Dropdown from "./dropdown";
 import Logo from "./test";
 import { OrangeButton } from "./orange-button";
+import { MobileNavButton } from "./mobile-nav-button";
 
 export async function Navbar() {
     return (
         <header className="w-full fixed top-0 z-100 p-1 text-white">
-            <div className="w-full rounded-lg border border border-zinc-800 bg-[rgba(0,0,0,0.92)] backdrop-blur-[30px]">
-                <div className="flex 
+            <div className="w-full rounded-lg border border border-zinc-800 bg-[#000000eb] backdrop-blur-[30px]">
+                <div className="w-full
+                                flex 
                                 min-h-[68px] 
                                 items-center 
                                 justify-between 
@@ -19,34 +21,40 @@ export async function Navbar() {
                                 lg:py-0"
                 >
 
-                    <nav className="flex items-center">
-                        <Link className="px-4 flex items-center gap-2" href="/">
-                            <Logo className="w-12 h-auto"/>
-                            <span>
-                                n8n.io
-                            </span>
-                            
-                        </Link>
+                    <Link className="px-4 flex items-center gap-2" href="/">
+                        <Logo className="w-12 h-auto" />
+                        <span>
+                            n8n.io
+                        </span>
+
+                    </Link>
+                    <nav className="hidden lg:flex items-center">
+
                         <Dropdown title="Product" />
                         <Dropdown title="Use Cases" />
                         <Dropdown title="Docs" />
                         <Dropdown title="Community" />
-                        <Dropdown title="Enterprise" />
-                        <Dropdown title="Pricing" />
+                        <Link href="/enterprise" className="px-4 py-2 text-gray-300 rounded-xl hover:text-white transition ">
+                            Enterprise
+                        </Link>
+                        <Link href="/pricing" className="px-4 py-2 text-gray-300 rounded-xl hover:text-white transition ">
+                            Pricing
+                        </Link>
 
                     </nav>
 
                     <div className="flex gap-8">
-                        <button className="bg-black border-1 border-gray-700 rounded-md px-2 flex items-center">
-                            <Github className="h-5"/>
-                            <span>GitHub</span>
-                            <Star className="h-3 fill-white"/>
+                        <MobileNavButton/>
+                        <button className="hidden md:flex bg-black border-1 border-gray-700 rounded-md px-2 flex items-center">
+                            <Github className="h-5" />
+                            <span className="hidden xl:flex">GitHub</span>
+                            <Star className="h-3 fill-white" />
                             <span className="text-sm">
                                 133,682
                             </span>
                         </button>
                         <button>Sign Up</button>
-                        <OrangeButton content="Get Started"/>
+                        <OrangeButton content="Get Started" />
                     </div>
                     {/* <nav className="flex">
                         <DropdownMenu>

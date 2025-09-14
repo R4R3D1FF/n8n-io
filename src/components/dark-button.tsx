@@ -44,13 +44,14 @@ export function DarkButton({ className, children = "Get Started", ...props }: Da
           // Match parent's border-radius, but slightly smaller if needed
           "rounded-[7px]",
           // Padding for the content
-          "px-4 py-1",
+          "px-4 py-2",
           // The main background of the button
           "bg-[#04002E] backdrop-blur-sm",
           // Ensure it's always above the gradient
           "w-full h-full",
 
-          "flex items-center"
+          "flex items-center",
+          "justify-center"
         )}
       >
         {children}

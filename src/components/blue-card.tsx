@@ -1,11 +1,11 @@
 "use client";
-import { ReactNode, useRef, useState } from "react";
+import React, { ReactNode, useRef, useState } from "react";
 
 
-export default function Card({ className = "", children }: { className?: string, children?: ReactNode }) {
+export default function BlueCard({ className = "", children }: { className?: string, children?: ReactNode }) {
 
     const divRef = useRef<HTMLDivElement>(null);
-    const [position, setPosition] = useState({ x: '-500%', y: '-500%' });
+    const [position, setPosition] = useState({ x: '-100%', y: '-100%' });
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (divRef.current) {
@@ -15,21 +15,17 @@ export default function Card({ className = "", children }: { className?: string,
             const yPercentage = (e.clientY - rect.top) / rect.height * 100;
 
             // Update the CSS variables with the percentage values
-            setPosition({
-                x: Math.floor(xPercentage).toString()+"%",
-                y: Math.floor(yPercentage).toString()+"%"
-            })
-            console.log(position);
+            divRef.current.style.setProperty('--x', `${xPercentage}%`);
+            divRef.current.style.setProperty('--y', `${yPercentage}%`);
         }
     };
 
     const handleMouseLeave = () => {
-        // if (divRef.current) {
-        //     // Reset to the center (50%) on mouse leave for a smooth re-entry
-        //     divRef.current.style.setProperty('--x', '50%');
-        //     divRef.current.style.setProperty('--y', '50%');
-        // }
-        setPosition({ x: '-500%', y: '-500%' });
+        if (divRef.current) {
+            // Reset to the center (50%) on mouse leave for a smooth re-entry
+            divRef.current.style.setProperty('--x', '-100%');
+            divRef.current.style.setProperty('--y', '-100%');
+        }
     };
 
 
@@ -38,7 +34,15 @@ export default function Card({ className = "", children }: { className?: string,
         <div ref={divRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className={`two-source-gradient
+            style={
+                {
+                    "--x": "5%",
+                    "--y": "5%"
+
+                } as React.CSSProperties
+            }
+            className={`blue-two-source-gradient
+
                     p-8 outline-1 
                     outline-gray-600 
                     rounded-xl 
@@ -46,10 +50,7 @@ export default function Card({ className = "", children }: { className?: string,
                     ${className}`}
         >
             <div className="absolute z-50 rounded-xl inset-0 border-[#7a5855] border-t-2" />
-            <div className={`absolute z-0 complex-gradient h-250 w-250 -translate-x-1/2 -translate-y-1/2 `}
-                style={{ top: position.y, left: position.x }}
-            >
-            </div>
+
             {children}
         </div>
     );

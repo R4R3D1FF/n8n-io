@@ -35,7 +35,7 @@ const icons = [
 
 export default function IconMarquee() {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-[95vw] overflow-hidden ">
       <div className="w-[200%] overflow-hidden flex flex-row items-center whitespace-nowrap marquee-content">
         {icons.map((src, i) => (
           <div
@@ -52,6 +52,21 @@ export default function IconMarquee() {
       </div>
 
       <div className="w-[200%] overflow-hidden flex flex-row items-center whitespace-nowrap marquee-content-reverse">
+        {icons.map((src, i) => (
+          <div
+            key={i}
+            className="p-2 h-23 w-23 flex items-center justify-center"
+          >
+            <div
+              className="flex-none rounded-lg h-18 w-18 bg-[#eaeaec] hover:bg-gradient-to-b hover:from-stone-300 hover:to-stone-600 hover:h-20 hover:w-20 flex items-center justify-center"
+            >
+              <img src={src} alt="" width={45} height={45} />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex md:hidden w-[200%] overflow-hidden flex flex-row items-center whitespace-nowrap marquee-content-reverse">
         {icons.map((src, i) => (
           <div
             key={i}
